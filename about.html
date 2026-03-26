@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - MySite</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0f172a;
+            padding: 15px 30px;
+            color: white;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #0f172a;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .about-box {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>MySite</h2>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- About Section -->
+<section class="about">
+    <h1>About Us</h1>
+    <p>
+        Welcome to MySite! We are passionate about building modern web applications 
+        and providing high-quality services. Our goal is to create simple, user-friendly 
+        and responsive designs for everyone.
+    </p>
+
+    <div class="about-box">
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>To deliver clean and efficient web solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Our Vision</h3>
+            <p>To become a leading tech solution provider.</p>
+        </div>
+
+        <div class="card">
+            <h3>Our Goal</h3>
+            <p>Make web development easy and accessible.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MySite. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("menu").classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
